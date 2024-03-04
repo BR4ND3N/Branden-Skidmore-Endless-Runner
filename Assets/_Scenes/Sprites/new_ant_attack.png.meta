@@ -1,0 +1,362 @@
+fileFormatVersion: 2
+guid: ae7edfe4da3e34a439bf253c52ff0a9c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4168070935120388393
+    second: new_ant_attack_0
+  - first:
+      213: -3391257697167065238
+    second: new_ant_attack_1
+  - first:
+      213: -3925419340440532980
+    second: new_ant_attack_2
+  - first:
+      213: -4192541877553013666
+    second: new_ant_attack_3
+  - first:
+      213: 8265856585545323352
+    second: new_ant_attack_4
+  - first:
+      213: 6180096873795539365
+    second: new_ant_attack_5
+  - first:
+      213: -7380986599080170202
+    second: new_ant_attack_6
+  - first:
+      213: -2283951143170365499
+    second: new_ant_attack_7
+  - first:
+      213: 437934712825929761
+    second: new_ant_attack_8
+  - first:
+      213: -1025634734104407992
+    second: new_ant_attack_9
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 280
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: new_ant_attack_0
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 23
+        width: 234
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ded48161990826c0800000000000000
+      internalID: -4168070935120388393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new_ant_attack_1
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 23
+        width: 234
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6f3c829715dfe0d0800000000000000
+      internalID: -3391257697167065238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new_ant_attack_2
+      rect:
+        serializedVersion: 2
+        x: 567
+        y: 23
+        width: 234
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c08089a58eb1689c0800000000000000
+      internalID: -3925419340440532980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new_ant_attack_3
+      rect:
+        serializedVersion: 2
+        x: 839
+        y: 23
+        width: 234
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5cd08a106911d5c0800000000000000
+      internalID: -4192541877553013666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new_ant_attack_4
+      rect:
+        serializedVersion: 2
+        x: 1118
+        y: 23
+        width: 236
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85390c925c836b270800000000000000
+      internalID: 8265856585545323352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new_ant_attack_5
+      rect:
+        serializedVersion: 2
+        x: 1399
+        y: 23
+        width: 233
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a1d518fc5d14c550800000000000000
+      internalID: 6180096873795539365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new_ant_attack_6
+      rect:
+        serializedVersion: 2
+        x: 1710
+        y: 23
+        width: 203
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62d68e55bc7719990800000000000000
+      internalID: -7380986599080170202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new_ant_attack_7
+      rect:
+        serializedVersion: 2
+        x: 2007
+        y: 23
+        width: 202
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c7abf24986cd40e0800000000000000
+      internalID: -2283951143170365499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new_ant_attack_8
+      rect:
+        serializedVersion: 2
+        x: 2271
+        y: 23
+        width: 242
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1206dc01d4bd31600800000000000000
+      internalID: 437934712825929761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new_ant_attack_9
+      rect:
+        serializedVersion: 2
+        x: 2543
+        y: 23
+        width: 234
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8409764b4a634c1f0800000000000000
+      internalID: -1025634734104407992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: c06304ab534ca0d459d520c39c5b4f91
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      new_ant_attack_0: -4168070935120388393
+      new_ant_attack_1: -3391257697167065238
+      new_ant_attack_2: -3925419340440532980
+      new_ant_attack_3: -4192541877553013666
+      new_ant_attack_4: 8265856585545323352
+      new_ant_attack_5: 6180096873795539365
+      new_ant_attack_6: -7380986599080170202
+      new_ant_attack_7: -2283951143170365499
+      new_ant_attack_8: 437934712825929761
+      new_ant_attack_9: -1025634734104407992
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
