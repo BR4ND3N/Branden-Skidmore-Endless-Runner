@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class PlayerCollisions : MonoBehaviour
 {
+
+    [SerializeField] GameObject player;
+    [SerializeField] GameObject[] obstacles;
+
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.transform.tag == "Obstacle")

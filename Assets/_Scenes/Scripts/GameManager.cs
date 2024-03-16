@@ -24,8 +24,6 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private UIManager uiManager;
 
-
-
     public string ScoreDisplay()
     {
         return Mathf.RoundToInt(currentScore).ToString();

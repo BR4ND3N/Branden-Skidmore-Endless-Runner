@@ -7,8 +7,8 @@ public class LayerChange : MonoBehaviour
     private float Up = 1.18f;
     private float Down = -1.18f;
 
-    [SerializeField] private float lane = 3f;
-    public PlayerMovement playerMovement;
+    public float lane = 3f;
+    public PlayerController playerController;
 
     // Start is called before the first frame update
     void Start()
@@ -19,7 +19,7 @@ public class LayerChange : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(playerMovement.isJumping == false)
+        if(playerController.isJumping == false)
         {
             if (Input.GetKeyDown("w"))
             {
@@ -46,7 +46,6 @@ public class LayerChange : MonoBehaviour
             }
         }
         
-
     }
 
 }

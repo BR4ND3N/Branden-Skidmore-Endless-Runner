@@ -1,13 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
+    //PlayerMovement Variables
+
     private float horizontal;
 
     [SerializeField] private float speed = 8f;
-    [SerializeField] private float jumpingPower = 16f;
+    [SerializeField] private float jumpingPower = 15f;
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
@@ -17,13 +20,24 @@ public class PlayerMovement : MonoBehaviour
     public bool isJumping = false;
     private bool isGrounded = true;
 
+    public Animator animator;
+
+    //LayerChange Variables
+
     private float Up = 1.18f;
     private float Down = -1.18f;
+    public float lane = 3f;
 
-    public Animator animator;
+    //ScrollSpeed Variable
+
+    public float scrollSpeed = 6f;
+
+    [SerializeField] private float timeAlive = 6f;
 
     private void Start()
     {
+        //PlayerMovement Code
+
         if (Physics2D.OverlapCircle(groundCheck.position, groundDistance, groundLayer) == true)
         {
             isGrounded = true;
@@ -40,6 +54,8 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        //PlayerMovement Code
+
         if(Input.GetButton("Horizontal"))
         {
             animator.SetFloat("Moving", 0.01f);
@@ -79,6 +95,66 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("IsJumping", false);
         }
         Flip();
+
+        //LayerChange Code
+
+        if (isJumping == false)
+        {
+            if (Input.GetKeyDown("w"))
+            {
+                transform.position += new Vector3(0, Up, 0);
+                lane -= 1f;
+            }
+
+            if (Input.GetKeyDown("s"))
+            {
+                transform.position += new Vector3(0, Down, 0);
+                lane += 1f;
+            }
+
+            if (lane <= 0f)
+            {
+                transform.position += new Vector3(0, Down, 0);
+                lane += 1f;
+            }
+
+            if (lane >= 6f)
+            {
+                transform.position += new Vector3(0, Up, 0);
+                lane -= 1f;
+            }
+
+            if (lane == 1f)
+            {
+                gameObject.layer = LayerMask.NameToLayer("Lane 1");
+            }
+
+            if (lane == 2f)
+            {
+                gameObject.layer = LayerMask.NameToLayer("Lane 2");
+            }
+
+            if (lane == 3f)
+            {
+                gameObject.layer = LayerMask.NameToLayer("Lane 3");
+            }
+
+            if (lane == 4f)
+            {
+                gameObject.layer = LayerMask.NameToLayer("Lane 4");
+            }
+
+            if (lane == 5f)
+            {
+                gameObject.layer = LayerMask.NameToLayer("Lane 5");
+            }
+        }
+
+        //ScrollSpeed Code
+
+        timeAlive += Time.deltaTime;
+
+        transform.Translate(Vector2.left * Time.deltaTime * scrollSpeed);
 
     }
 
