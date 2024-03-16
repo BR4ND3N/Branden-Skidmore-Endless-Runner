@@ -94,6 +94,10 @@ public class PlayerController : MonoBehaviour
         {
             animator.SetBool("IsJumping", false);
         }
+
+        speed =+ 0.1f * Time.deltaTime;
+        scrollSpeed = +0.1f * Time.deltaTime;
+
         Flip();
 
         //LayerChange Code
