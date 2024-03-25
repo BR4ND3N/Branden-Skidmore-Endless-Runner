@@ -5,20 +5,27 @@ using UnityEngine.UI;
 
 public class BackgroundScrolling : MonoBehaviour
 {
-    [Range(-3f, 3f)]
-    public float scrollSpeed = 3f;
-    private float offset;
-    private Material mat;
-
-    void Start()
-    {
-        mat = GetComponent<Renderer>().material;
-    }
+    public float scrollSpeed = 6f;
+    public float maxScrollSpeed = 18f;
+    [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private float timeAlive = 6f;
+    [SerializeField] private Transform groundCheck;
+    [SerializeField] private LayerMask backLayer;
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        offset += (Time.deltaTime * scrollSpeed) / 10f;
-        mat.SetTextureOffset("_MainTex", new Vector2(offset, 0));
+        timeAlive += Time.deltaTime;
+        transform.Translate(Vector2.left * Time.deltaTime * scrollSpeed);
+
+        if (gameObject.transform.position.x <= -17.75f)
+        {
+            gameObject.transform.position = new Vector3(17.75f,transform.position.y,transform.position.z);
+        }
+
+        if (scrollSpeed < maxScrollSpeed)
+        {
+            scrollSpeed += 0.1f * Time.deltaTime;
+        }
     }
 }

@@ -42,6 +42,9 @@ public class GameManager : MonoBehaviour
         {
             currentScore += Time.deltaTime;
         }
+
+
+
     }
 
     public void EnemyDefeated()

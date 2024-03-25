@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     private float horizontal;
 
     [SerializeField] private float speed = 8f;
+    [SerializeField] private float maxSpeed = 20f;
     [SerializeField] private float jumpingPower = 15f;
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
@@ -31,6 +32,7 @@ public class PlayerController : MonoBehaviour
     //ScrollSpeed Variable
 
     public float scrollSpeed = 6f;
+    public float maxScrollSpeed = 18f;
 
     [SerializeField] private float timeAlive = 6f;
 
@@ -94,9 +96,6 @@ public class PlayerController : MonoBehaviour
         {
             animator.SetBool("IsJumping", false);
         }
-
-        speed =+ 0.1f * Time.deltaTime;
-        scrollSpeed = +0.1f * Time.deltaTime;
 
         Flip();
 
@@ -165,6 +164,16 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+
+        if (speed < maxSpeed)
+        {
+            speed += 0.1f * Time.deltaTime;
+        }
+
+        if (scrollSpeed < maxScrollSpeed)
+        {
+            scrollSpeed += 0.1f * Time.deltaTime;
+        }
     }
 
     private bool IsGrounded()

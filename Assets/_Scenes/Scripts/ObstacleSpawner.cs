@@ -9,11 +9,7 @@ public class ObstacleSpawner : MonoBehaviour
     [SerializeField] private float spawnTimeMin = 2f;
     [SerializeField] private float spawnTimeMax = 6f;
     [SerializeField] private float obstacleSpeed = 3f;
-    [SerializeField] private float Spawn1;
-    [SerializeField] private float Spawn2;
-    [SerializeField] private float Spawn3;
-    [SerializeField] private float Spawn4;
-    [SerializeField] private float Spawn5;
+    [SerializeField] private float maxObstacleSpeed = 18f;
 
     private float timeUntilObstacleSpawn;
 
@@ -33,48 +29,53 @@ public class ObstacleSpawner : MonoBehaviour
         if (timeUntilObstacleSpawn >= obstacleSpawnTime)
         {
             Spawn();
+
             obstacleSpawnTime = Random.Range(spawnTimeMin, spawnTimeMax);
             timeUntilObstacleSpawn = 0f;
+
         }
 
     }
     private void Spawn()
     {
-            if (gameObject.transform.position.y == .35f)
-            {
-                GameObject obstacleToSpawn = obstaclePrefabs[Random.Range(0, obstaclePrefabs.Length)];
-
-                GameObject spawnedObstacle = Instantiate(obstacleToSpawn, transform.position, Quaternion.identity);
-
-                Rigidbody2D obstacleRB = spawnedObstacle.GetComponent<Rigidbody2D>();
-                obstacleRB.velocity = Vector2.left * obstacleSpeed;
-
-                spawnedObstacle.layer = LayerMask.NameToLayer("Lane 1");
-            }
-
-            else if (gameObject.transform.position.y == -.9f)
-            {
+        if (gameObject.transform.position.y == .35f)
+        {
             GameObject obstacleToSpawn = obstaclePrefabs[Random.Range(0, obstaclePrefabs.Length)];
 
             GameObject spawnedObstacle = Instantiate(obstacleToSpawn, transform.position, Quaternion.identity);
 
             Rigidbody2D obstacleRB = spawnedObstacle.GetComponent<Rigidbody2D>();
-            obstacleRB.velocity = Vector2.left * obstacleSpeed;
+
+            spawnedObstacle.layer = LayerMask.NameToLayer("Lane 1");
+
+            spawnedObstacle.AddComponent<PrefabScrolling>();
+        }
+
+        else if (gameObject.transform.position.y == -.9f)
+        {
+            GameObject obstacleToSpawn = obstaclePrefabs[Random.Range(0, obstaclePrefabs.Length)];
+
+            GameObject spawnedObstacle = Instantiate(obstacleToSpawn, transform.position, Quaternion.identity);
+
+            Rigidbody2D obstacleRB = spawnedObstacle.GetComponent<Rigidbody2D>();
 
             spawnedObstacle.layer = LayerMask.NameToLayer("Lane 2");
-            }
 
-            else if (gameObject.transform.position.y == -2.15f)
-            {
+            spawnedObstacle.AddComponent<PrefabScrolling>();
+        }
+
+        else if (gameObject.transform.position.y == -2.15f)
+        {
             GameObject obstacleToSpawn = obstaclePrefabs[Random.Range(0, obstaclePrefabs.Length)];
 
             GameObject spawnedObstacle = Instantiate(obstacleToSpawn, transform.position, Quaternion.identity);
 
             Rigidbody2D obstacleRB = spawnedObstacle.GetComponent<Rigidbody2D>();
-            obstacleRB.velocity = Vector2.left * obstacleSpeed;
 
             spawnedObstacle.layer = LayerMask.NameToLayer("Lane 3");
-            }
+
+            spawnedObstacle.AddComponent<PrefabScrolling>();
+        }
 
         else if (gameObject.transform.position.y == -3.25f)
         {
@@ -83,9 +84,10 @@ public class ObstacleSpawner : MonoBehaviour
             GameObject spawnedObstacle = Instantiate(obstacleToSpawn, transform.position, Quaternion.identity);
 
             Rigidbody2D obstacleRB = spawnedObstacle.GetComponent<Rigidbody2D>();
-            obstacleRB.velocity = Vector2.left * obstacleSpeed;
 
             spawnedObstacle.layer = LayerMask.NameToLayer("Lane 4");
+
+            spawnedObstacle.AddComponent<PrefabScrolling>();
         }
 
         else if (gameObject.transform.position.y == -4.5f)
@@ -95,9 +97,10 @@ public class ObstacleSpawner : MonoBehaviour
             GameObject spawnedObstacle = Instantiate(obstacleToSpawn, transform.position, Quaternion.identity);
 
             Rigidbody2D obstacleRB = spawnedObstacle.GetComponent<Rigidbody2D>();
-            obstacleRB.velocity = Vector2.left * obstacleSpeed;
 
             spawnedObstacle.layer = LayerMask.NameToLayer("Lane 5");
+
+            spawnedObstacle.AddComponent<PrefabScrolling>();
         }
     }
 }
